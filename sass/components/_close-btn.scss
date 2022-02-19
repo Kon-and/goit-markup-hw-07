@@ -1,0 +1,26 @@
+.close-btn {
+  background-color: transparent;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 50%;
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  width: 30px;
+  height: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  &-icon {
+    fill: var(--text-main);
+    width: 11px;
+    height: 11px;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    transition-property: transform, fill;
+  }
+  &:hover &-icon,
+  &:focus &-icon {
+    fill: var(--accent-color);
+    transform: rotate(180deg) scale(1.3);
+  }
+}
