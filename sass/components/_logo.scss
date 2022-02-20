@@ -9,3 +9,17 @@
   padding-top: 24px;
   padding-bottom: 25px;
 }
+
+.logo-dark {
+  color: #000000;
+}
+
+.logo__footer {
+  padding: 0;
+  font-style: normal;
+  margin-bottom: 20px;
+}
+
+.logo--light {
+  color: var(--main-color);
+}

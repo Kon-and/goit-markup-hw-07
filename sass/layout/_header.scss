@@ -1,72 +1,52 @@
-.header-socials-icons {
-  fill: var(--text-second);
-  transition-duration: 250ms;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-  transition-property: fill;
-}
-
-.header-cont-item:hover .header-socials-icons,
-.header-cont-text:focus .header-socials-icons {
-  fill: var(--accent-color);
-}
-
-.header-cont-text {
-  display: flex;
-  align-items: center;
-}
-
-.header-socials-icons {
-  margin-right: 10px;
-}
-
-.logo-dark {
-  color: #000000;
-}
-
-.contacts-footer {
-  flex-grow: 1;
-}
-
-.header-list {
-  font-weight: 500;
-  line-height: calc(16 / 14);
-  letter-spacing: 0.02em;
-  display: flex;
-}
-
-.header-item + .header-item {
-  margin-left: 50px;
-}
-
-.contact-conteiner {
-  margin-left: auto;
-  padding-top: 32px;
-  padding-bottom: 32px;
-}
-
-.navigation {
-  padding-top: 32px;
-  padding-bottom: 32px;
-  margin-left: 93px;
-}
-
-.header-cont-item + .header-cont-item {
-  margin-left: 50px;
-}
-
-.header-cont-item {
-  display: inline-block;
-}
-
-.header-cont {
-  font-weight: 500;
-  line-height: calc(16 / 14);
-  letter-spacing: 0.02em;
-  color: var(--text-second);
-}
-
-.header-container {
+.header {
   display: flex;
   align-items: center;
   border-bottom: 1px solid #ececec;
+  &__navigation {
+    padding-top: 32px;
+    padding-bottom: 32px;
+    margin-left: 93px;
+  }
+  &__list {
+    font-weight: 500;
+    line-height: calc(16 / 14);
+    letter-spacing: 0.02em;
+    display: flex;
+  }
+  &__item + &__item {
+    margin-left: 50px;
+  }
+}
+
+.contact {
+  margin-left: auto;
+  padding-top: 32px;
+  padding-bottom: 32px;
+  &__list {
+    font-weight: 500;
+    line-height: calc(16 / 14);
+    letter-spacing: 0.02em;
+    color: var(--text-second);
+  }
+  &__item {
+    display: inline-block;
+    &:hover .contact__icons,
+    &:focus .contact__icons {
+      fill: var(--accent-color);
+    }
+    & + & {
+      margin-left: 50px;
+    }
+  }
+  &__icons {
+    margin-right: 10px;
+    fill: var(--text-second);
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    transition-property: fill;
+  }
+  &__text {
+    display: flex;
+    align-items: center;
+  }
 }
