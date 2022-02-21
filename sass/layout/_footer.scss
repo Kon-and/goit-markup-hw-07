@@ -5,11 +5,7 @@
 }
 
 .footer__text {
-  font-weight: 700;
-  font-size: 14px;
-  line-height: calc(16 / 14);
-  letter-spacing: 0.03em;
-  text-transform: uppercase;
+  @include font(14px, 700, 16px, 0.03em, uppercase);
   color: var(--main-color);
 }
 
@@ -21,9 +17,7 @@
   }
   &__list {
     display: contents;
-    font-style: normal;
-    line-height: calc(24 / 14);
-    letter-spacing: 0.03em;
+    @include font(14px, null, 24px, 0.03em, null);
     color: rgba(255, 255, 255, 0.6);
   }
   &__item + &__item {
@@ -45,12 +39,8 @@
     height: 44px;
     background: rgba(255, 255, 255, 0.1);
     border-radius: 50%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    cursor: pointer;
-    transition-duration: 250ms;
-    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    @include flex();
+    @include animate();
     transition-property: background-color, border-radius;
     &:hover,
     &:focus {

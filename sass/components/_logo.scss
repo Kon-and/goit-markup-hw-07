@@ -1,9 +1,6 @@
 .logo {
   font-family: 'Raleway', sans-serif;
-  font-weight: 700;
-  font-size: 26px;
-  line-height: calc(31 / 26);
-  letter-spacing: 0.03em;
+  @include font(26px, 700, 26px, 0.03em, null);
   color: var(--accent-color);
   display: inline-block;
   padding-top: 24px;
@@ -16,7 +13,6 @@
 
 .logo__footer {
   padding: 0;
-  font-style: normal;
   margin-bottom: 20px;
 }
 

@@ -1,14 +1,11 @@
 .checkbox {
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  @include flex();
   &__icon {
     border: 2px solid var(--text-main);
     border-radius: 2px;
     fill: transparent;
     margin-right: 8px;
-    transition-duration: 250ms;
-    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    @include animate();
     transition-property: background-color, fill, border;
   }
   &__input:checked + &__icon {

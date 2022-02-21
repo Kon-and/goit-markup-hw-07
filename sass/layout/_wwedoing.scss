@@ -3,11 +3,8 @@
 }
 
 .doing {
-  font-weight: 700;
-  font-size: 36px;
-  line-height: calc(42 / 36);
+  @include font(36px, 700, 42px, 0.03em, null);
   text-align: center;
-  letter-spacing: 0.03em;
   margin-bottom: 50px;
   &__list {
     display: flex;
@@ -18,23 +15,16 @@
   &__box {
     position: relative;
     &--textbox {
-      position: absolute;
+      @include flex();
+      @include zero_pos(absolute, null, null);
       left: 0;
       bottom: 0;
-      display: flex;
-      justify-content: center;
-      align-items: center;
       width: 100%;
       height: 70px;
       background: rgba(47, 48, 58, 0.8);
     }
     &--text {
-      font-weight: 700;
-      font-size: 14px;
-      line-height: calc(16 / 14);
-      text-align: center;
-      letter-spacing: 0.03em;
-      text-transform: uppercase;
+      @include font(14px, 700, 16px, 0.03em, uppercase);
       color: var(--main-color);
     }
   }

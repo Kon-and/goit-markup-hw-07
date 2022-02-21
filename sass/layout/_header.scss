@@ -1,6 +1,5 @@
 .header {
-  display: flex;
-  align-items: center;
+  @include flex(flex, null, center);
   border-bottom: 1px solid #ececec;
   &__navigation {
     padding-top: 32px;
@@ -8,9 +7,7 @@
     margin-left: 93px;
   }
   &__list {
-    font-weight: 500;
-    line-height: calc(16 / 14);
-    letter-spacing: 0.02em;
+    @include font(14px, 500, 16px, 0.02em, null);
     display: flex;
   }
   &__item + &__item {
@@ -23,26 +20,24 @@
   padding-top: 32px;
   padding-bottom: 32px;
   &__list {
-    font-weight: 500;
-    line-height: calc(16 / 14);
-    letter-spacing: 0.02em;
+    @include font(14px, 500, 16px, 0.02em, null);
     color: var(--text-second);
   }
   &__item {
     display: inline-block;
-    &:hover .contact__icons,
-    &:focus .contact__icons {
-      fill: var(--accent-color);
-    }
+
     & + & {
       margin-left: 50px;
     }
   }
+  .contact__item:hover .contact__icons,
+  .contact__text:focus .contact__icons {
+    fill: var(--accent-color);
+  }
   &__icons {
     margin-right: 10px;
     fill: var(--text-second);
-    transition-duration: 250ms;
-    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    @include animate();
     transition-property: fill;
   }
   &__text {

@@ -1,8 +1,6 @@
 body {
   font-family: 'Roboto', sans-serif;
-  font-size: 14px;
-  line-height: calc(24 / 14);
-  letter-spacing: 0.03em;
+  @include font(14px, null, 24px, 0.03em, null);
   color: var(--text-main);
   background-color: var(--main-color);
 }

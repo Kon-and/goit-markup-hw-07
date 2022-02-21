@@ -3,10 +3,7 @@
 }
 
 .team {
-  font-weight: 700;
-  font-size: 36px;
-  line-height: calc(42 / 36);
-  letter-spacing: 0.03em;
+  @include font(36px, 700, 42px, 0.03em, null);
   text-align: center;
   margin-bottom: 50px;
   &__list {
@@ -22,18 +19,13 @@
     }
   }
   &__name {
-    font-weight: 500;
-    font-size: 16px;
-    line-height: calc(19 / 16);
+    @include font(16px, 500, 19px, 0.03em, null);
     text-align: center;
-    letter-spacing: 0.03em;
     margin-bottom: 10px;
   }
   &__position {
-    font-size: 16px;
-    line-height: calc(19 / 16);
+    @include font(16px, null, 19px, 0.03em, null);
     text-align: center;
-    letter-spacing: 0.03em;
     color: var(--text-second);
     margin-bottom: 16px;
   }
@@ -42,19 +34,14 @@
     padding-bottom: 30px;
   }
   &__socials {
-    display: flex;
-    justify-content: center;
+    @include flex(flex, center, null);
     &--link {
       width: 44px;
       height: 44px;
       border-radius: 50%;
-      display: flex;
-      justify-content: center;
-      align-items: center;
+      @include flex();
       fill: var(--icons-color);
-      cursor: pointer;
-      transition-duration: 250ms;
-      transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+      @include animate();
       transition-property: background-color, fill;
       &:hover,
       &:focus {
