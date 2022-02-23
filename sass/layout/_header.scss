@@ -27,9 +27,9 @@
   color: var(--text-second);
   .contact__item {
     display: inline-block;
-    & + & {
-      margin-left: 50px;
-    }
+  }
+  .contact__item + .contact__item {
+    margin-left: 50px;
   }
   .contact__item:hover .contact__icons,
   .contact__text:focus .contact__icons {

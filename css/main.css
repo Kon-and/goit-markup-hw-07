@@ -641,7 +641,7 @@ summary {
   display: inline-block;
 }
 
-.contact .contact__item + .contact .contact__item {
+.contact .contact__item + .contact__item {
   margin-left: 50px;
 }
 
