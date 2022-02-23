@@ -1,16 +1,20 @@
 .header {
-  @include flex(flex, null, center);
-  border-bottom: 1px solid #ececec;
-  &__navigation {
+  .header__container {
+    @include flex(flex, null, center);
+    border-bottom: 1px solid #ececec;
+  }
+  .header__navigation {
     padding-top: 32px;
     padding-bottom: 32px;
     margin-left: 93px;
   }
-  &__list {
-    @include font(14px, 500, 16px, 0.02em, null);
-    display: flex;
-  }
-  &__item + &__item {
+}
+
+.sitenav {
+  @include font(14px, 500, 16px, 0.02em, null);
+  display: flex;
+
+  .sitenav__item + .sitenav__item {
     margin-left: 50px;
   }
 }
@@ -19,13 +23,10 @@
   margin-left: auto;
   padding-top: 32px;
   padding-bottom: 32px;
-  &__list {
-    @include font(14px, 500, 16px, 0.02em, null);
-    color: var(--text-second);
-  }
-  &__item {
+  @include font(14px, 500, 16px, 0.02em, null);
+  color: var(--text-second);
+  .contact__item {
     display: inline-block;
-
     & + & {
       margin-left: 50px;
     }
@@ -34,13 +35,13 @@
   .contact__text:focus .contact__icons {
     fill: var(--accent-color);
   }
-  &__icons {
+  .contact__icons {
     margin-right: 10px;
     fill: var(--text-second);
     @include animate();
     transition-property: fill;
   }
-  &__text {
+  .contact__text {
     display: flex;
     align-items: center;
   }

@@ -1,6 +1,6 @@
 .checkbox {
   @include flex();
-  &__icon {
+  .checkbox__icon {
     border: 2px solid var(--text-main);
     border-radius: 2px;
     fill: transparent;
@@ -8,12 +8,12 @@
     @include animate();
     transition-property: background-color, fill, border;
   }
-  &__input:checked + &__icon {
+  .checkbox__input:checked + .checkbox__icon {
     fill: var(--main-color);
     background-color: var(--accent-color);
     border: none;
   }
-  &__link {
+  .checkbox__link {
     color: var(--accent-color);
     text-decoration: underline;
   }

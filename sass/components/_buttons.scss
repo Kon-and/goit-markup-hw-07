@@ -1,4 +1,14 @@
-.button__close {
+.button {
+  background: var(--accent-color);
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  @include font(16px, 700, 30px, 0.06em, null);
+  color: var(--main-color);
+  @include animate();
+  border-radius: 4px;
+  border: none;
+}
+
+.button-close {
   background-color: transparent;
   border: 1px solid rgba(0, 0, 0, 0.1);
   border-radius: 50%;
@@ -8,83 +18,16 @@
   width: 30px;
   height: 30px;
   @include flex();
-  &--icon {
+  .close__icon {
     fill: var(--text-main);
     width: 11px;
     height: 11px;
     @include animate();
     transition-property: transform, fill;
   }
-  &:hover &--icon,
-  &:focus &--icon {
+  &:hover .close__icon,
+  &:focus .close__icon {
     fill: var(--accent-color);
     transform: rotate(180deg) scale(1.3);
-  }
-}
-
-.modal__submit {
-  @include flex(flex, null, center);
-  text-align: center;
-  color: var(--main-color);
-  padding: 10px 55px;
-  margin-top: 30px;
-  margin-left: auto;
-  margin-right: auto;
-  margin-bottom: 0px;
-  transition-property: background-color;
-  &:hover,
-  &:focus {
-    background-color: #188ce8;
-  }
-}
-
-.hero__btn {
-  min-width: 136px;
-  padding: 10px 32px;
-  transition-property: background-color;
-  &:hover,
-  &:focus {
-    background-color: #188ce8;
-  }
-}
-
-.filters-btn {
-  background: var(--main-second-color);
-  border-radius: 4px;
-  font-family: inherit;
-  @include font(16px, 500, 30px, 0.06em, null);
-  min-width: 73px;
-  border: none;
-  padding: 6px 22px;
-  @include animate();
-  transition-property: background, color, box-shadow;
-  &:focus,
-  &:hover {
-    background: var(--accent-color);
-    color: var(--main-color);
-    box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
-      0px 2px 2px rgba(0, 0, 0, 0.12);
-  }
-}
-
-.button {
-  background: var(--accent-color);
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
-  @include font(16px, 700, 30px, 0.06em, null);
-
-  color: var(--main-color);
-  @include animate();
-  border-radius: 4px;
-  border: none;
-}
-
-.subscribe__btn {
-  @include flex(flex, null, center);
-  padding: 10px 28px;
-  margin-left: 12px;
-  transition-property: background-color;
-  &:focus,
-  &:hover {
-    background-color: #188ce8;
   }
 }

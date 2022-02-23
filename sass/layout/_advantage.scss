@@ -1,30 +1,28 @@
 .advantage {
   @include flex(flex, center, null);
   margin: 0px 0px;
-  &__item + &__item {
+  @include flex(flex, center, null);
+  margin-left: auto;
+  margin-right: auto;
+  .advantage__item + .advantage__item {
     margin-left: 30px;
   }
-  &__list {
-    @include flex(flex, center, null);
-    margin-left: auto;
-    margin-right: auto;
-  }
-  &__iconsbox {
+  .advantage__iconsbox {
     background-color: var(--main-second-color);
     border-radius: 4px;
     margin-bottom: 30px;
     @include flex();
     min-width: 270px;
     min-height: 120px;
-    &--icon {
-      width: 70px;
-      height: 70px;
-    }
   }
-  &__pretext {
+  .advantage__icon {
+    width: 70px;
+    height: 70px;
+  }
+  .advantage__title {
     @include font(14px, 700, 16px, 0.03em, uppercase);
   }
-  &__text {
+  .advantage__text {
     @include font(14px, null, 24px, 0.03em, null);
     color: var(--text-second);
     margin-top: 10px;
